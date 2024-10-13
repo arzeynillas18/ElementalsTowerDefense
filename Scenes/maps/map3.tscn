@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://cax6fd4w6yqtv"]
+
+[ext_resource type="Script" path="res://Scenes/maps/baseMap.gd" id="1_2jrkw"]
+[ext_resource type="Texture2D" uid="uid://cm308kg0i6cpr" path="res://Assets/maps/map3.png" id="2_widj1"]
+[ext_resource type="Script" path="res://Scenes/maps/EnemySpawner.gd" id="3_bkydo"]
+
+[sub_resource type="Curve2D" id="Curve2D_bs0b4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -570, -175, 0, 0, 0, 0, -338, -175, 0, 0, 0, 0, -333, 7, 0, 0, 0, 0, -110, 1, 0, 0, 0, 0, -108, 158, 0, 0, 0, 0, 289, 163, 0, 0, 0, 0, 297, 71, 0, 0, 0, 0, 414, 64)
+}
+point_count = 8
+
+[node name="TestMap" type="Node2D"]
+script = ExtResource("1_2jrkw")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(18, 15)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_widj1")
+
+[node name="PathSpawner" type="Path2D" parent="."]
+curve = SubResource("Curve2D_bs0b4")
+script = ExtResource("3_bkydo")
+
+[node name="SpawnDelay" type="Timer" parent="PathSpawner"]
+wait_time = 0.2
+one_shot = true
+
+[node name="WaveDelayTimer" type="Timer" parent="PathSpawner"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Turrets" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="Obstacles" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacles"]
+position = Vector2(1015.83, -149.434)
+scale = Vector2(4.54948, 1.18694)
+polygon = PackedVector2Array(-350.552, -3.00418, -301.316, 2.05084, -301.755, 146.962, -252.739, 151.174, -252.079, 275.022, -154.486, 277.55, -153.387, 206.78, -131.406, 202.567, -130.967, 167.182, -163.498, 165.497, -163.498, 240.48, -241.749, 238.795, -242.408, 114.946, -291.205, 113.261, -291.864, -32.4919, -349.893, -37.5469)
+
+[connection signal="timeout" from="PathSpawner/SpawnDelay" to="PathSpawner" method="_on_spawn_delay_timeout"]
+[connection signal="timeout" from="PathSpawner/WaveDelayTimer" to="PathSpawner" method="_on_wave_delay_timer_timeout"]
