@@ -153,28 +153,14 @@ const enemies := {
 
 const maps := {
 	"map1": {
-		"name": "Grass Map",
-		"bg": "res://Assets/maps/map1.webp",
+		"name": "Arena Map",
+		"bg": "res://Assets/maps/map1.png",
 		"scene": "res://Scenes/maps/map1.tscn",
 		"baseHp": 10,
 		"startingGold": 100,
 		"spawner_settings":
 			{
 			"difficulty": {"initial": 2.0, "increase": 1.5, "multiplies": true},
-			"max_waves": 10,
-			"wave_spawn_count": 10,
-			"special_waves": {},
-			},
-	},
-	"map2": {
-		"name": "Desert Map",
-		"bg": "res://Assets/maps/map2.png",
-		"scene": "res://Scenes/maps/map2.tscn",
-		"baseHp": 15,
-		"startingGold": 200,
-		"spawner_settings":
-			{
-			"difficulty": {"initial": 1.0, "increase": 1.2, "multiplies": true},
 			"max_waves": 10,
 			"wave_spawn_count": 10,
 			"special_waves": {},
@@ -212,7 +198,7 @@ const maps := {
 	},
 	
 	"map5": {
-		"name": "Enchanted Map",
+		"name": "Deserted Map",
 		"bg": "res://Assets/maps/map5.jpg",
 		"scene": "res://Scenes/maps/map5.tscn",
 		"baseHp": 10,
