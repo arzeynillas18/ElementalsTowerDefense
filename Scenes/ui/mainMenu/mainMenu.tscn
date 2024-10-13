@@ -1,7 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://duvsvsvu8biwm"]
+[gd_scene load_steps=7 format=3 uid="uid://duvsvsvu8biwm"]
 
 [ext_resource type="Script" path="res://Scenes/ui/mainMenu/main_menu.gd" id="1_lnqmy"]
 [ext_resource type="Texture2D" uid="uid://didi8ffqykvkh" path="res://Assets/menu/bg.png" id="2_jl1fa"]
+
+[sub_resource type="Theme" id="Theme_puq0k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd4fw"]
+bg_color = Color(0.201537, 0.587175, 0.346783, 1)
+border_width_right = 10
+border_width_bottom = 8
+border_color = Color(0.114429, 0.339405, 0.203341, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+shadow_color = Color(0.306923, 0.306923, 0.306923, 0.6)
+shadow_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_466u6"]
+bg_color = Color(0.0784314, 0.65098, 0.34902, 1)
+border_width_right = 7
+border_width_bottom = 8
+border_color = Color(0.0639743, 0.322481, 0.190648, 1)
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+shadow_color = Color(0, 0.522189, 0, 0.6)
+
+[sub_resource type="Theme" id="Theme_horg7"]
+Button/styles/normal = SubResource("StyleBoxFlat_466u6")
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -72,12 +104,17 @@ layout_mode = 2
 [node name="startButton" type="Button" parent="MenuButtons2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_puq0k")
 theme_override_colors/font_hover_pressed_color = Color(0.992157, 0.505882, 0.917647, 1)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_pd4fw")
 text = "Start Game"
 
 [node name="quitButton" type="Button" parent="MenuButtons2/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_horg7")
+theme_override_font_sizes/font_size = 28
 text = "Quit"
 
 [connection signal="pressed" from="MenuButtons/VBoxContainer/startButton" to="." method="_on_start_button_pressed"]
