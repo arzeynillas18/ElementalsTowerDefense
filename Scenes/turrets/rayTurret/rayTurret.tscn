@@ -1,9 +1,9 @@
 [gd_scene load_steps=18 format=3 uid="uid://bpnr2j3gxucn"]
 
 [ext_resource type="Script" path="res://Scenes/turrets/rayTurret/ray_turret.gd" id="1_bpos3"]
-[ext_resource type="Texture2D" uid="uid://bymmygqhoyd52" path="res://Assets/turrets/turret1.png" id="2_m55dh"]
+[ext_resource type="Texture2D" uid="uid://gqqyy23pgbsh" path="res://Assets/turrets/turret1.png" id="2_m55dh"]
 [ext_resource type="Shader" path="res://Scenes/turrets/rayTurret/laser.gdshader" id="3_qc2r3"]
-[ext_resource type="Texture2D" uid="uid://cqagn7cmsxru1" path="res://Assets/bullets/Pixel.png" id="4_fjepc"]
+[ext_resource type="Texture2D" uid="uid://dr0ndem12yexg" path="res://Assets/bullets/Pixel.png" id="4_fjepc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_alu5v"]
 atlas = ExtResource("2_m55dh")
