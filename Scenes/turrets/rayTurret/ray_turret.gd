@@ -7,13 +7,11 @@ var ray_length := 400.0
 var ray_duration := 2.0
 
 
-
-var ice_frost_color := Color(0.678, 0.847, 0.902, 0.8)  
-var ice_frost_color_end := Color(0.678, 0.847, 0.902, 0.0) 
+var ice_frost_color := Color(0.678, 0.847, 0.902, 0.8)  # Light blue with some transparency
+var ice_frost_color_end := Color(0.678, 0.847, 0.902, 0.0)  # Fully transparent at the end
 
 func _ready():
 	setup_ray_visuals()
-	$AnimatedSprite2D.play("default")
 
 func setup_ray_visuals():
 	var ray_line = $HitArea/Line2D

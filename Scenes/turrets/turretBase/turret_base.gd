@@ -5,7 +5,6 @@ signal turretUpdated
 
 var turret_type := "":
 	set(value):
-		$AnimatedSprite2D.play("default")
 		turret_type = value
 		$Sprite2D.texture = load(Data.turrets[value]["sprite"])
 		$Sprite2D.scale = Vector2(Data.turrets[value]["scale"],Data.turrets[value]["scale"])

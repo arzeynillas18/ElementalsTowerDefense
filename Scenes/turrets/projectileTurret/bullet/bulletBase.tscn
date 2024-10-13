@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" uid="uid://djv5uvpfktdlq" path="res://Assets/bullets/bullet2.tres" id="2_otc75"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_govwh"]
-radius = 7.51665
+radius = 4.5
 
 [node name="BulletBase" type="Node2D"]
 scale = Vector2(2, 2)
@@ -13,7 +13,7 @@ script = ExtResource("1_a00cp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0.499999, 0)
-scale = Vector2(0.32, 0.401)
+scale = Vector2(0.11129, 0.139313)
 sprite_frames = ExtResource("2_otc75")
 autoplay = "default"
 frame_progress = 0.565667

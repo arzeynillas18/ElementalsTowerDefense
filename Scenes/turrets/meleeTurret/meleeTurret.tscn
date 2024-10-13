@@ -1,8 +1,8 @@
 [gd_scene load_steps=72 format=3 uid="uid://dbktwv0atytem"]
 
 [ext_resource type="Script" path="res://Scenes/turrets/meleeTurret/melee_turret.gd" id="1_65sy1"]
-[ext_resource type="Texture2D" uid="uid://hy67ejn1kbde" path="res://Assets/turrets/turret2.png" id="2_m2w4o"]
-[ext_resource type="Texture2D" uid="uid://b2fmdls0fgbnj" path="res://Assets/vfx/explosion 4.png" id="3_pj1bg"]
+[ext_resource type="Texture2D" uid="uid://d1hsv6jhsq03f" path="res://Assets/turrets/turret2.png" id="2_m2w4o"]
+[ext_resource type="Texture2D" uid="uid://c3r8upfrvgwf3" path="res://Assets/vfx/explosion 4.png" id="3_pj1bg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ds6ah"]
 animations = [{
