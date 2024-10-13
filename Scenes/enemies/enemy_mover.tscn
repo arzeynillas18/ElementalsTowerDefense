@@ -38,7 +38,7 @@ position = Vector2(4, -0.494022)
 scale = Vector2(2, 1.56478)
 texture = ExtResource("2_bpnqn")
 hframes = 24
-frame = 9
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
