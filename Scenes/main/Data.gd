@@ -168,7 +168,7 @@ const maps := {
 	},
 	
 	"map3": {
-		"name": "Grass Map",
+		"name": "Grass Valley Map",
 		"bg": "res://Assets/maps/map3.png",
 		"scene": "res://Scenes/maps/map3.tscn",
 		"baseHp": 10,

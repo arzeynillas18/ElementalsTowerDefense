@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://duvsvsvu8biwm"]
+[gd_scene load_steps=8 format=3 uid="uid://duvsvsvu8biwm"]
 
 [ext_resource type="Script" path="res://Scenes/ui/mainMenu/main_menu.gd" id="1_lnqmy"]
 [ext_resource type="Texture2D" uid="uid://b8we2dvqrrc4k" path="res://Assets/menu/bg.png" id="2_jl1fa"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1314k"]
+border_width_bottom = 5
+border_color = Color(0.000113828, 0.000113828, 0.000113828, 1)
+
 [sub_resource type="Theme" id="Theme_puq0k"]
+Button/styles/normal = SubResource("StyleBoxFlat_1314k")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd4fw"]
 bg_color = Color(0.201537, 0.587175, 0.346783, 1)
@@ -23,7 +28,7 @@ shadow_size = 7
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_466u6"]
 bg_color = Color(0.0784314, 0.65098, 0.34902, 1)
-border_width_right = 7
+border_width_right = 10
 border_width_bottom = 8
 border_color = Color(0.0639743, 0.322481, 0.190648, 1)
 expand_margin_left = 4.0
@@ -105,7 +110,6 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_puq0k")
-theme_override_colors/font_hover_pressed_color = Color(0.992157, 0.505882, 0.917647, 1)
 theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_pd4fw")
 text = "Start Game"
