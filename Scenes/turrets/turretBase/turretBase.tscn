@@ -1,10 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://b35vf52g3e7yc"]
+[gd_scene load_steps=7 format=3 uid="uid://b35vf52g3e7yc"]
 
 [ext_resource type="Script" path="res://Scenes/turrets/turretBase/turret_base.gd" id="1_l4mpo"]
-[ext_resource type="Texture2D" uid="uid://dpyxf10ag1t85" path="res://Assets/turrets/turret4.png" id="2_ag0q7"]
+[ext_resource type="Texture2D" uid="uid://bx6443ip8hjyh" path="res://Assets/turrets/turret4.png" id="2_ag0q7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op1t5"]
+atlas = ExtResource("2_ag0q7")
+region = Rect2(21, 8, 160, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qikhe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op1t5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aicnu"]
-radius = 22.8
+radius = 36.0139
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kae7m"]
 radius = 230.11
@@ -13,9 +28,14 @@ radius = 230.11
 script = ExtResource("1_l4mpo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 z_index = 2
 texture_filter = 1
 texture = ExtResource("2_ag0q7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_qikhe")
 
 [node name="CollisionArea" type="Area2D" parent="."]
 collision_layer = 2

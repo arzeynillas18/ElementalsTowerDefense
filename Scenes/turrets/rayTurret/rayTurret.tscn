@@ -1,12 +1,27 @@
-[gd_scene load_steps=16 format=3 uid="uid://bpnr2j3gxucn"]
+[gd_scene load_steps=18 format=3 uid="uid://bpnr2j3gxucn"]
 
 [ext_resource type="Script" path="res://Scenes/turrets/rayTurret/ray_turret.gd" id="1_bpos3"]
-[ext_resource type="Texture2D" uid="uid://gqqyy23pgbsh" path="res://Assets/turrets/turret1.png" id="2_m55dh"]
+[ext_resource type="Texture2D" uid="uid://bymmygqhoyd52" path="res://Assets/turrets/turret1.png" id="2_m55dh"]
 [ext_resource type="Shader" path="res://Scenes/turrets/rayTurret/laser.gdshader" id="3_qc2r3"]
-[ext_resource type="Texture2D" uid="uid://dr0ndem12yexg" path="res://Assets/bullets/Pixel.png" id="4_fjepc"]
+[ext_resource type="Texture2D" uid="uid://cqagn7cmsxru1" path="res://Assets/bullets/Pixel.png" id="4_fjepc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alu5v"]
+atlas = ExtResource("2_m55dh")
+region = Rect2(0, 2, 166, 203)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gx4mv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alu5v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_aicnu"]
-radius = 22.8
+radius = 33.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kae7m"]
 radius = 230.11
@@ -44,8 +59,8 @@ shader_parameter/xStretch = 1.0
 shader_parameter/yStretch = 0.1
 shader_parameter/laserSize = 0.814
 shader_parameter/wobbliness = 0.084
-shader_parameter/color1 = Color(1, 0, 0, 1)
-shader_parameter/color2 = Color(1, 0.588235, 0, 1)
+shader_parameter/color1 = Color(0, 0.682532, 0.7587, 1)
+shader_parameter/color2 = Color(0.956089, 0.856169, 0.921167, 1)
 shader_parameter/colorMixFactor = 3.528
 shader_parameter/glowFactor = 3.0
 shader_parameter/minAlpha = 0.5
@@ -61,11 +76,16 @@ point_count = 2
 script = ExtResource("1_bpos3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 z_index = 2
 texture_filter = 1
 position = Vector2(11, -3)
 scale = Vector2(0.3, 0.261)
 texture = ExtResource("2_m55dh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_gx4mv")
 
 [node name="CollisionArea" type="Area2D" parent="."]
 collision_layer = 2
