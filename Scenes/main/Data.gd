@@ -45,7 +45,7 @@ const turrets := {
 		"rotates": false,
 		"bullet": "laser",
 	},
-	"ray": {
+	"IceTower": {
 		"stats": {
 			"damage": 0.5,
 			"attack_speed": 0.5,
@@ -64,7 +64,7 @@ const turrets := {
 		"upgrade_cost": 50,
 		"max_level": 3,
 		"scene": "res://Scenes/turrets/rayTurret/rayTurret.tscn",
-		"sprite": "res://Assets/turrets/reallaser.png",
+		"sprite": "res://Assets/turrets/turret1.png",
 		"scale": 1.0,
 		"rotates": true,
 	},
