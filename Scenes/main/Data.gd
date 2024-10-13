@@ -112,7 +112,7 @@ const enemies := {
 	"yellowDino1": {
 		"stats": {
 			"hp": 10.0,
-			"speed": 1.0,
+			"speed": .3,
 			"baseDamage": 5.0,
 			"goldYield": 10.0,
 			},
@@ -122,7 +122,7 @@ const enemies := {
 	"blueDino": {
 		"stats": {
 			"hp": 5.0,
-			"speed": 2.0,
+			"speed": 1,
 			"baseDamage": 5.0,
 			"goldYield": 10.0,
 			},
@@ -132,7 +132,7 @@ const enemies := {
 	"yellowDino": {
 		"stats": {
 			"hp": 10.0,
-			"speed": 1.0,
+			"speed": .5,
 			"baseDamage": 1.0,
 			"goldYield": 10.0,
 			},
@@ -142,7 +142,7 @@ const enemies := {
 	"greenDino": {
 		"stats": {
 			"hp": 10.0,
-			"speed": 5.0,
+			"speed": 2,
 			"baseDamage": 1.0,
 			"goldYield": 10.0,
 			},

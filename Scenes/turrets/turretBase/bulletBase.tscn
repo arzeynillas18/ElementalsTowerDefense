@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://cw8dl6kw77qmf"]
 
-[ext_resource type="Script" path="res://Scenes/turrets/projectileTurret/bullet/bulletBase.gd" id="1_a00cp"]
-[ext_resource type="SpriteFrames" uid="uid://djv5uvpfktdlq" path="res://Assets/bullets/bullet2.tres" id="2_otc75"]
+[ext_resource type="Script" path="res://Scenes/turrets/projectileTurret/bullet/bulletBase.gd" id="1_ogg7m"]
+[ext_resource type="SpriteFrames" uid="uid://djv5uvpfktdlq" path="res://Assets/bullets/bullet2.tres" id="2_74bx5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_govwh"]
-radius = 4.5
+radius = 10.5119
 
 [node name="BulletBase" type="Node2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_a00cp")
+script = ExtResource("1_ogg7m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0.499999, 0)
 scale = Vector2(0.11129, 0.139313)
-sprite_frames = ExtResource("2_otc75")
+sprite_frames = ExtResource("2_74bx5")
 autoplay = "default"
 frame_progress = 0.565667
 
