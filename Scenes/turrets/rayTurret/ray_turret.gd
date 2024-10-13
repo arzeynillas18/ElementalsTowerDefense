@@ -3,12 +3,25 @@ extends Turret
 var can_fire := true
 var ray_enabled := false
 var ray_extension := 0.0
-
 var ray_length := 400.0
 var ray_duration := 2.0
 
+
+var ice_frost_color := Color(0.678, 0.847, 0.902, 0.8)  # Light blue with some transparency
+var ice_frost_color_end := Color(0.678, 0.847, 0.902, 0.0)  # Fully transparent at the end
+
+func _ready():
+	setup_ray_visuals()
+
+func setup_ray_visuals():
+	var ray_line = $HitArea/Line2D
+	ray_line.default_color = ice_frost_color
+	ray_line.width = 10  # Adjust as needed
+	ray_line.gradient = Gradient.new()
+	ray_line.gradient.colors = [ice_frost_color, ice_frost_color_end]
+
 func _process(delta):
-	super._process(delta)
+	super(delta)
 	if ray_enabled and ray_extension < 1.0:
 		ray_extension += 0.1
 		activate_ray(ray_extension)

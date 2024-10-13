@@ -12,8 +12,11 @@ script = ExtResource("1_a00cp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+position = Vector2(0.499999, 0)
+scale = Vector2(0.11129, 0.139313)
 sprite_frames = ExtResource("2_otc75")
 autoplay = "default"
+frame_progress = 0.565667
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8

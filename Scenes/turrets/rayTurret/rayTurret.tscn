@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bpnr2j3gxucn"]
 
 [ext_resource type="Script" path="res://Scenes/turrets/rayTurret/ray_turret.gd" id="1_bpos3"]
-[ext_resource type="Texture2D" uid="uid://83kim8fm0f2s" path="res://Assets/turrets/technoturret.png" id="2_45tcr"]
+[ext_resource type="Texture2D" uid="uid://gqqyy23pgbsh" path="res://Assets/turrets/turret1.png" id="2_m55dh"]
 [ext_resource type="Shader" path="res://Scenes/turrets/rayTurret/laser.gdshader" id="3_qc2r3"]
 [ext_resource type="Texture2D" uid="uid://dr0ndem12yexg" path="res://Assets/bullets/Pixel.png" id="4_fjepc"]
 
@@ -63,7 +63,9 @@ script = ExtResource("1_bpos3")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 2
 texture_filter = 1
-texture = ExtResource("2_45tcr")
+position = Vector2(11, -3)
+scale = Vector2(0.3, 0.261)
+texture = ExtResource("2_m55dh")
 
 [node name="CollisionArea" type="Area2D" parent="."]
 collision_layer = 2
@@ -76,6 +78,7 @@ shape = SubResource("CircleShape2D_aicnu")
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+position = Vector2(2, 2)
 shape = SubResource("CircleShape2D_kae7m")
 
 [node name="AttackCooldown" type="Timer" parent="."]

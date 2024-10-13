@@ -1,7 +1,7 @@
 extends Node
 
 const turrets := {
-	"gatling": {
+	"GreenTower": {
 		"stats": {
 			"damage": 10,
 			"attack_speed": 2.0,
@@ -13,17 +13,17 @@ const turrets := {
 			"damage": {"amount": 2.5, "multiplies": false},
 			"attack_speed": {"amount": 1.5, "multiplies": true},
 		},
-		"name": "Gatling Gun",
+		"name": "Green Tower",
 		"cost": 50,
 		"upgrade_cost": 50,
 		"max_level": 2,
 		"scene": "res://Scenes/turrets/projectileTurret/projectileTurret.tscn",
-		"sprite": "res://Assets/turrets/technoturret.png",
+		"sprite": "res://Assets/turrets/turret4.png",
 		"scale": 4.0,
 		"rotates": true,
 		"bullet": "fire",
 	},
-	"laser": {
+	"FlameTower": {
 		"stats": {
 			"damage": 0.5,
 			"attack_speed": 20.0,
@@ -35,12 +35,12 @@ const turrets := {
 			"damage": {"amount": 2.5, "multiplies": false},
 			"attack_speed": {"amount": 1.5, "multiplies": true},
 		},
-		"name": "Flamethrower",
+		"name": "FlameTower",
 		"cost": 70,
 		"upgrade_cost": 50,
 		"max_level": 3,
 		"scene": "res://Scenes/turrets/projectileTurret/projectileTurret.tscn",
-		"sprite": "res://Assets/turrets/laserturret.png",
+		"sprite": "res://Assets/turrets/turret3.png",
 		"scale": 1.0,
 		"rotates": false,
 		"bullet": "laser",
@@ -59,7 +59,7 @@ const turrets := {
 			"ray_length": {"amount": 1.5, "multiplies": true},
 			"ray_duration": {"amount": 1.5, "multiplies": true},
 		},
-		"name": "Raygun",
+		"name": "IceTower",
 		"cost": 30,
 		"upgrade_cost": 50,
 		"max_level": 3,
@@ -68,7 +68,7 @@ const turrets := {
 		"scale": 1.0,
 		"rotates": true,
 	},
-	"melee": {
+	"RockTower": {
 		"stats": {
 			"damage": 5.0,
 			"attack_speed": 1.0,
@@ -78,12 +78,12 @@ const turrets := {
 			"damage": {"amount": 2.5, "multiplies": false},
 			"attack_speed": {"amount": 1.5, "multiplies": true},
 		},
-		"name": "Explosive",
+		"name": "RockTower",
 		"cost": 70,
 		"upgrade_cost": 50,
 		"max_level": 3,
 		"scene": "res://Scenes/turrets/meleeTurret/meleeTurret.tscn",
-		"sprite": "res://Assets/turrets/dynamite.png",
+		"sprite": "res://Assets/turrets/turret2.png",
 		"scale": 1.0,
 		"rotates": false,
 	},

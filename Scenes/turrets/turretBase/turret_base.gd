@@ -8,18 +8,18 @@ var turret_type := "":
 		turret_type = value
 		$Sprite2D.texture = load(Data.turrets[value]["sprite"])
 		$Sprite2D.scale = Vector2(Data.turrets[value]["scale"],Data.turrets[value]["scale"])
-		rotates = Data.turrets[value]["rotates"]
 		for stat in Data.turrets[value]["stats"].keys():
 			set(stat, Data.turrets[value]["stats"][stat])
 
-#Deploying
+# Deploying
 var deployed := false
 var can_place := false
 var draw_range := false
-#Attacking
-var rotates := true
+
+# Attacking
 var current_target = null
-#Stats
+
+# Stats
 var attack_speed := 1.0:
 	set(value):
 		attack_speed = value
@@ -35,16 +35,15 @@ func _process(_delta):
 	if not deployed:
 		@warning_ignore("standalone_ternary")
 		colliding() if $CollisionArea.has_overlapping_areas() else not_colliding()
-	elif rotates:
-		@warning_ignore("standalone_ternary")
-		look_at(current_target.position) if is_instance_valid(current_target) else try_get_closest_target()
+	else:
+		try_get_closest_target()
 
 func _draw():
 	if draw_range:
-		draw_circle(Vector2(0,0), attack_range, "3ccd50a9", false, 1, true)
+		draw_circle(Vector2(0,0), attack_range, Color(0.24, 0.80, 0.31, 0.6), false)
 
 func set_placeholder():
-	modulate = Color("6eff297a")
+	modulate = Color(0.43, 1.0, 0.16, 0.48)
 
 func build():
 	deployed = true
@@ -52,11 +51,11 @@ func build():
 
 func colliding():
 	can_place = false
-	modulate = Color("ff5c2990")
+	modulate = Color(1.0, 0.36, 0.16, 0.56)
 
 func not_colliding():
 	can_place = true
-	modulate = Color("6eff297a")
+	modulate = Color(0.43, 1.0, 0.16, 0.48)
 
 func _on_detection_area_area_entered(area):
 	if deployed and not current_target:
