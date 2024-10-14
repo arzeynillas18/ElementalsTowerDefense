@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dunjwx3q7asjq"]
 
 [ext_resource type="Script" path="res://Scenes/ui/turretUI/turret_details.gd" id="1_0x613"]
-[ext_resource type="Texture2D" uid="uid://83kim8fm0f2s" path="res://Assets/turrets/technoturret.png" id="1_1lsyn"]
+[ext_resource type="Texture2D" uid="uid://dpyxf10ag1t85" path="res://Assets/turrets/turret4.png" id="2_e56fw"]
 [ext_resource type="PackedScene" uid="uid://bg1le57woay1j" path="res://Scenes/ui/turretUI/stat_label.tscn" id="3_bd6mv"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vopfk"]
@@ -60,7 +60,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_vopfk")
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("1_1lsyn")
+texture = ExtResource("2_e56fw")
 expand_mode = 3
 stretch_mode = 5
 
